@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package binancetrade;
+
+option java_multiple_files=true;
+option java_package="org.yourkoder.com";
+option java_outer_classname="BinanceTrade";
+
+message Trade{
+	int64 id=1;
+	string symbol=2;
+	string time=3;
+	sfixed64 timeStamp=4;
+	double price=5;
+}
+
+message Trade_List{
+	repeated Trade tradelist=1;
+}
